@@ -1,5 +1,5 @@
 /**
- * mpfw (mpax235 Framework) is owned by mpax235.
+ * The mpax235 Framework is owned by mpax235.
  * 
  * MIT License
  * 
