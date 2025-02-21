@@ -81,12 +81,16 @@ const mpaxfw = {
         document.body.appendChild(script);
     },
 
-    createObject: function(elementType, textContent, name, id, classname) {
+    createObject: function(elementType, textContent, name, id, classname, width, height) {
         let element = document.createElement(elementType);
         if (name) element.setAttribute('name', name);
         if (id) element.id = id;
         if (classname) element.className = classname;
         if (textContent) element.textContent = textContent;
+        if (elementType.toLowerCase() === 'video') {
+            if (width) element.width = width;
+            if (height) element.height = height;
+        }
         document.body.appendChild(element);
     },
 
@@ -114,5 +118,42 @@ const mpaxfw = {
             .catch(error => {
                 console.error('MPAX235 FRAMEWORK ERROR: Webhook failed with error: ', error);
             });
+    },
+
+    turnOnCamera: async function(width, height, id) {
+        try {
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(stream => {
+                        const videoElement = document.createElement('video');
+                        videoElement.id = id;
+                        videoElement.width = width;
+                        videoElement.height = height;
+                        videoElement.autoplay = true;
+                        videoElement.srcObject = stream;
+
+                        document.body.appendChild(videoElement);
+                    })
+                    .catch(err => {
+                        console.error('MPAX235 FRAMEWORK ERROR: ' + err);
+                    });
+            } else {
+                console.error('MPAX235 FRAMEWORK ERROR: Camera not found. Please make sure you have a camera plugged in your system and detected.');
+            }
+        } catch (error) {
+            console.error('MPAX235 FRAMEWORK ERROR: ' + error);
+        }
+    },
+
+    turnOffCamera: function(videoObject) {
+        const video = document.getElementById(videoObject);
+        const stream = video.srcObject;
+        if (stream) {
+            const tracks = stream.getTracks();
+            tracks.forEach(track => track.stop());
+        }
+        video.srcObject = null;
+        video.load();
+        video.remove();
     }
 };
