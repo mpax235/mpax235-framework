@@ -33,7 +33,7 @@ init();
 /**
  * MAIN FRAMEWORK CODE
  */
-const mpfw = {
+const mpaxfw = {
     log: function(message) {
         console.log(message);
     },
