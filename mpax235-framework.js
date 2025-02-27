@@ -24,8 +24,9 @@
  * SOFTWARE.
  */
 function init() {
-    let ver = "1.0";
-    console.log('Framework by mpax235. ' + ver);
+    let ver = "1.1";
+
+    console.log('The mpax235 Framework. Version ' + ver + '. Made by mpax235.');
 }
 
 init();
@@ -38,11 +39,11 @@ const mpaxfw = {
         console.log(message);
     },
 
-    createCanvas: function(width, height, color) {
+    createCanvas: function(width, height, backgroundcolor) {
         let canvas = document.createElement('canvas');
         canvas.width = width;
         canvas.height = height;
-        canvas.style.backgroundColor = color;
+        canvas.style.backgroundColor = backgroundcolor;
         document.body.appendChild(canvas);
     },
 
@@ -60,7 +61,7 @@ const mpaxfw = {
         document.head.appendChild(favicon);
     },
 
-    alertWindow: function(message) {
+    windowAlert: function(message) {
         window.alert(message);
     },
 
@@ -71,8 +72,8 @@ const mpaxfw = {
         document.head.appendChild(link);
     },
 
-    defineVariable: function(variable, value) {
-        window[variable] = value;
+    defineVariable: function(variableName, value) {
+        window[variableName] = value;
     },
 
     loadJS: function(jsfile) {
@@ -110,7 +111,7 @@ const mpaxfw = {
         })
             .then(response => {
                 if (response.ok) {
-                    console.log('MPAX235 FRAMEWORK SUCCESS: Discord webhook successful. The message that was sent to the webhook is: ' + message);
+                    console.log('MPAX235 FRAMEWORK SUCCESS: Discord webhook function successful. The message that was sent to the webhook is: ' + message);
                 } else {
                     console.error('MPAX235 FRAMEWORK ERROR: Webhook failed with error: ', response.statusText);
                 }
@@ -138,7 +139,7 @@ const mpaxfw = {
                         console.error('MPAX235 FRAMEWORK ERROR: ' + err);
                     });
             } else {
-                console.error('MPAX235 FRAMEWORK ERROR: Camera not found. Please make sure you have a camera plugged in your system and detected.');
+                console.error('MPAX235 FRAMEWORK ERROR: Camera not found. Please make sure you have a camera plugged into your system and it is detected.');
             }
         } catch (error) {
             console.error('MPAX235 FRAMEWORK ERROR: ' + error);

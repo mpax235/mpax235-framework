@@ -1,0 +1,45 @@
+/*
+//////////////////
+// MAIN
+//////////////////
+*/
+
+/* IDS */
+
+#content {
+    margin-left: 10px;
+    margin-right: 5px;
+    flex: 1;
+}
+
+/* CLASSES */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.documentationcontent {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.documentationcontent button {
+    width: 200px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #1616165e;
+    backdrop-filter: blur(7px);
+    border-right: 1px solid rgba(0, 255, 255, 0.18);
+    width: 220px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    height: calc(-231px + 100vh);
+}

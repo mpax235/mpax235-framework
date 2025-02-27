@@ -1,0 +1,17 @@
+/* PAGES */
+
+.homepage {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 145px);
+    overflow: hidden;
+}
+
+.homepage .documentationcontent {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}

@@ -1,0 +1,154 @@
+/*
+//////////////////
+// CORE
+//////////////////
+*/
+
+/* MAIN CORE */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', 'Arial';
+    background-color: #000000;
+    background-image: url('https://mpax235.github.io/assets/images/websitebackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    background-color: #000000;
+    backdrop-filter: blur(7px);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0063635e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    border-radius: 12px;
+    backdrop-filter: blur(7px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0083835e;
+}
+
+::-webkit-scrollbar-track {
+    background: #0000005e;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #0063635e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+}
+
+::-webkit-scrollbar-button:hover {
+    background-color: #0083835e;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url('https://mpax235.github.io/assets/images/scrollbar/scrollbar_up_arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url('https://mpax235.github.io/assets/images/scrollbar/scrollbar_down_arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement,
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+    display: none;
+}
+
+
+/* CORE ELEMENTS */
+
+button {
+    background-color: #1616165e;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    padding: 10px 15px;
+    color: #00ffff;
+    font-family: 'Montserrat', 'Arial';
+    text-decoration: none;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.2s ease-in-out;
+    backdrop-filter: blur(7px);
+}
+
+button:hover {
+    background-color: #00ffff5e;
+    transform: scale(1.05);
+    color: #000000;
+}
+
+input {
+    background-color: #1616165e;
+    color: #00ffff;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    padding: 10px 15px;
+    font-family: 'Montserrat', 'Arial';
+    text-decoration: none;
+    text-align: left;
+    border-radius: 12px;
+    transition: 0.2s ease-in-out;
+    backdrop-filter: blur(7px);
+}
+
+input::placeholder {
+    transition: 0.2s ease-in-out;
+    color: rgba(0, 255, 255, 0.18);
+}
+
+input:hover {
+    background-color: #00ffff5e;
+    color: #000000;
+}
+
+input:hover::placeholder {
+    color: rgba(0, 0, 0, 0.82);
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+p {
+    color: #00ffff;
+}
+
+h1, h2, h3, h4, h5, h6, table {
+    color: #00ffff;
+    font-weight: normal;
+}
+
+table {
+    text-align: left;
+    color: #00ffff;
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+    backdrop-filter: blur(7px);
+}
+
+td, th {
+    padding: 4px;
+    border: 1px solid rgba(0, 255, 255, 0.18);
+    background-color: #1111115e;
+}

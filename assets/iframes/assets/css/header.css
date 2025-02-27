@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.18);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #1111115e;
+    backdrop-filter: blur(7px);
+}
+
+#logo {
+    height: 45px;
+    margin: 10px;
+    display: flex;
+}
