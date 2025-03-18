@@ -12,6 +12,15 @@
     flex: 1;
 }
 
+#categoryname {
+    text-align: center;
+}
+
+#content {
+    height: calc(-231px + 100vh);
+    overflow-y: auto;
+}
+
 /* CLASSES */
 
 .container {

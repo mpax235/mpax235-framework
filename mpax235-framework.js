@@ -23,18 +23,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-function init() {
-    let ver = "1.1";
-
-    console.log('The mpax235 Framework. Version ' + ver + '. Made by mpax235.');
-}
-
-init();
 
 /**
  * MAIN FRAMEWORK CODE
  */
 const mpaxfw = {
+    ver: '1.2',
+    lastfmArtist: '',
+    lastfmName: '',
+    lastFmAlbum: '',
+
     log: function(message) {
         console.log(message);
     },
@@ -156,5 +154,41 @@ const mpaxfw = {
         video.srcObject = null;
         video.load();
         video.remove();
+    },
+
+    lastFM(apiKey, username) {
+        const key = apiKey;
+    
+        const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${encodeURIComponent(username)}&api_key=${key}&format=json`;
+    
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data?.recenttracks?.track && data.recenttracks.track.length > 0) {
+                    const latestTrack = data.recenttracks.track[0];
+                    const trackName = latestTrack.name || "Unknown Track";
+                    const trackArtist = latestTrack.artist['#text'] || "Unknown Artist";
+                    const trackAlbum = latestTrack.album['#text'] || "Unknown Album";
+
+                    this.lastfmArtist = trackArtist;
+                    this.lastfmName = trackName;
+                    this.lastFmAlbum = trackAlbum;
+                    console.log(`${trackName}, ${trackArtist}, ${trackAlbum}`);
+                } else {
+                    console.error('MPAX235 FRAMEWORK ERROR: ' + data);
+                }
+            })
+            .catch(error => {
+                console.error('MPAX235 FRAMEWORK ERROR: ' + error);
+            });
     }
 };
+
+/**
+ * INIT CODE
+ */
+function init() {
+    console.log('The mpax235 Framework. Version ' + mpaxfw.ver + '. Made by mpax235.');
+}
+
+init();

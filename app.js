@@ -23,6 +23,10 @@ document.getElementById('discordWebhook').addEventListener('click', () => {
     loadMarkdown('documentation/functions/discordWebhook.md');
 });
 
+document.getElementById('lastFM').addEventListener('click', () => {
+    loadMarkdown('documentation/functions/lastFM.md');
+});
+
 document.getElementById('loadCSS').addEventListener('click', () => {
     loadMarkdown('documentation/functions/loadCSS.md');
 });
