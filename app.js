@@ -47,6 +47,10 @@ document.getElementById('setWindowTitle').addEventListener('click', () => {
     loadMarkdown('documentation/functions/setWindowTitle.md');
 });
 
+document.getElementById('tone').addEventListener('click', () => {
+    loadMarkdown('documentation/functions/tone.md');
+});
+
 document.getElementById('turnOffCamera').addEventListener('click', () => {
     loadMarkdown('documentation/functions/turnOffCamera.md');
 });

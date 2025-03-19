@@ -28,7 +28,7 @@
  * MAIN FRAMEWORK CODE
  */
 const mpaxfw = {
-    ver: '1.2',
+    ver: '1.3',
     lastfmArtist: '',
     lastfmName: '',
     lastFmAlbum: '',
@@ -156,7 +156,7 @@ const mpaxfw = {
         video.remove();
     },
 
-    lastFM(apiKey, username) {
+    lastFM: function(apiKey, username) {
         const key = apiKey;
     
         const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${encodeURIComponent(username)}&api_key=${key}&format=json`;
@@ -181,6 +181,26 @@ const mpaxfw = {
             .catch(error => {
                 console.error('MPAX235 FRAMEWORK ERROR: ' + error);
             });
+    },
+
+    tone: function(frequency, seconds) {
+        const hz = frequency;
+        const sec = seconds;
+
+        if (isNaN(hz) || isNaN(sec) || hz <= 0 || sec <= 0) {
+            console.log('MPAX235 FRAMEWORK ERROR: Please enter valid values for the tone() function.');
+            return;
+        }
+
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = "sine";
+        oscillator.frequency.setValueAtTime(hz, audioContext.currentTime);
+        oscillator.connect(audioContext.destination);
+
+        oscillator.start();
+        setTimeout(() => oscillator.stop(), sec * 1000);
     }
 };
 
