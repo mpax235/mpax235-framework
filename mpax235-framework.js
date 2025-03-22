@@ -28,7 +28,7 @@
  * MAIN FRAMEWORK CODE
  */
 const mpaxfw = {
-    ver: '1.3',
+    ver: '1.3.1',
     lastfmArtist: '',
     lastfmName: '',
     lastFmAlbum: '',
@@ -93,7 +93,7 @@ const mpaxfw = {
         document.body.appendChild(element);
     },
 
-    discordWebhook: function(url, message) {
+    sendDWebhookMessage: function(url, message) {
         const webhookURL = url;
         
         const messageContent = {
@@ -183,7 +183,7 @@ const mpaxfw = {
             });
     },
 
-    tone: function(frequency, seconds) {
+    playTone: function(frequency, seconds, type) {
         const hz = frequency;
         const sec = seconds;
 
@@ -195,7 +195,7 @@ const mpaxfw = {
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
         const oscillator = audioContext.createOscillator();
-        oscillator.type = "sine";
+        oscillator.type = type;
         oscillator.frequency.setValueAtTime(hz, audioContext.currentTime);
         oscillator.connect(audioContext.destination);
 

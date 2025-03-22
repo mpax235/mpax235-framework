@@ -1,7 +1,7 @@
-# discordWebhook
+# sendDWebhookMessage
 This function sends a message to a specified Discord webhook url. To use this function, use the following code:
 
-`mpawfw.discordWebhook('[url]', '[message]');`
+`mpawfw.sendDWebhookMessage('[url]', '[message]');`
 
 Where `url` is the url you want to send it to, and `message` for the message you want it to say.
 
