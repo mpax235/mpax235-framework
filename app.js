@@ -47,8 +47,8 @@ document.getElementById('sendDWebhookMessage').addEventListener('click', () => {
     loadMarkdown('documentation/functions/sendDWebhookMessage.md');
 });
 
-document.getElementById('lastFM').addEventListener('click', () => {
-    loadMarkdown('documentation/functions/lastFM.md');
+document.getElementById('retrieveLastFM').addEventListener('click', () => {
+    loadMarkdown('documentation/functions/retrieveLastFM.md');
 });
 
 document.getElementById('loadCSS').addEventListener('click', () => {
@@ -83,6 +83,6 @@ document.getElementById('turnOnCamera').addEventListener('click', () => {
     loadMarkdown('documentation/functions/turnOnCamera.md');
 });
 
-document.getElementById('windowAlert').addEventListener('click', () => {
-    loadMarkdown('documentation/functions/windowAlert.md');
+document.getElementById('alertWindow').addEventListener('click', () => {
+    loadMarkdown('documentation/functions/alertWindow.md');
 });

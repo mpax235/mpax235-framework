@@ -1,0 +1,1 @@
+mpaxfw.alertWindow('hello mpax235 framework!');

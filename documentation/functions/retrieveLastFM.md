@@ -1,7 +1,7 @@
-# lastFM
+# retrieveLastFM
 This functions retrieves the latest track name, album, and artist form the specified username. A last.fm API key is required for this to work. To use this function, use the following code:
 
-`mpaxfw.lastFM('[apiKey], [username]');`
+`mpaxfw.retrieveLastFM('[apiKey], [username]');`
 
 Where `apiKey` is the API key you are required to put in, and `username` for the username you want to retrieve the latest track from.
 
