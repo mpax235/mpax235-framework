@@ -29,18 +29,26 @@
  * MAIN FRAMEWORK CODE
  */
 const mpaxfw = {
-    ver: '1.3.2',
+    ver: '1.3.3',
     lastfmArtist: '',
     lastfmName: '',
     lastfmAlbum: '',
 
     //#region Art
-    createCanvas: function(width, height, backgroundcolor) {
+    createCanvas: function(id, width, height, backgroundcolor) {
         let canvas = document.createElement('canvas'); // creates the canvas dom element
         canvas.width = width; // sets the canvas's width to the specified width
         canvas.height = height; // sets the canvas's height to the specified height
+        canvas.id = id;
         canvas.style.backgroundColor = backgroundcolor; // sets the canvas's background color to the specified backgroundcolor
         document.body.appendChild(canvas); // appends the canvas dom element to the body dom element
+    },
+
+    drawPixels: function(canvasID, pixelColor, posX, posY, X, Y) {
+        const canvas = document.getElementById(canvasID);
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = pixelColor;
+        ctx.fillRect(posX, posY, X, Y);
     },
     //#endregion
 

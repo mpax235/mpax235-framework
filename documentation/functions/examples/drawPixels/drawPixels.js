@@ -22,11 +22,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-/* MAIN HEADER */
-
-#header-iframe {
-    border: none;
-    width: 100%;
-    height: 66px;
-    vertical-align: bottom;
-}
+mpaxfw.createCanvas('mpaxCanvas', 200, 200, '#00ffff');
+mpaxfw.drawPixels('mpaxCanvas', '#ff0000', 50, 100, 100, 50);
