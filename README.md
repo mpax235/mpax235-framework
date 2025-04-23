@@ -1,3 +1,5 @@
+<img align="right" width="140" height="140" src="assets/images/docs/mpaxfw.svg">
+
 # The mpax235 Framework
 The mpax235 Framework is a JavaScript framework that tends to make coding more easier.
 
