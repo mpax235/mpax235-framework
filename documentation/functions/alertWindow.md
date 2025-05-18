@@ -1,7 +1,7 @@
 # alertWindow
 This function creates a alert box with the specified message. To use this function, use the following code:
 
-`mpawfw.alertWindow('[message]');`
+`mpaxfw.alertWindow('[message]');`
 
 Where `message` is the message you want in the alert box.
 

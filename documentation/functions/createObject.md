@@ -1,7 +1,7 @@
 # createObject
 This function creates a HTML element with the specified type, text, name, id, and class name. Exclusive to video elements are width and height. To use this function, use the following code:
 
-`mpawfw.createObject('[elementType]', '[textContent]', '[name]', '[id]', '[classname]', [width], [height]);`
+`mpaxfw.createObject('[elementType]', '[textContent]', '[name]', '[id]', '[classname]', [width], [height]);`
 
 Where `elementType` is the type of element you want, `textContent` for the text content you want, `name` for the name you want, `id` for the id you want, and `classname` for the class name you want.
 

@@ -1,7 +1,7 @@
 # loadCSS
 This function loads the specified CSS file. To use this function, use the following code:
 
-`mpawfw.loadCSS('[cssfile]');`
+`mpaxfw.loadCSS('[cssfile]');`
 
 Where `cssfile` is the CSS file you want to load.
 

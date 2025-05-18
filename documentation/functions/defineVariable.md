@@ -1,7 +1,7 @@
 # defineVariable
 This function defines a variable with the specified name and value. To use this function, use the following code:
 
-`mpawfw.defineVariable('[variableName]', [value]);`
+`mpaxfw.defineVariable('[variableName]', [value]);`
 
 Where `variableName` is the name you want and `value` for the value you want.
 

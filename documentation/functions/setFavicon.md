@@ -1,7 +1,7 @@
 # setFavicon
 This function sets the favicon with the specified image. To use this function, use the following code:
 
-`mpawfw.setFavicon('[faviconImage]');`
+`mpaxfw.setFavicon('[faviconImage]');`
 
 Where `faviconImage` is the image of the favicon you want.
 

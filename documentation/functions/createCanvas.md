@@ -1,7 +1,7 @@
 # createCanvas
 This function creates a canvas with the specified width, height, and background color. To use this function, use the following code:
 
-`mpawfw.createCanvas('[id]', [width], [height], '[backgroundcolor]');`
+`mpaxfw.createCanvas('[id]', [width], [height], '[backgroundcolor]');`
 
 Where `id` is the id you want, `width` is the width you want, `height` for the height you want, and `backgroundcolor` for the background color you want.
 

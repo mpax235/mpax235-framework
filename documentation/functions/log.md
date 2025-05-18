@@ -1,7 +1,7 @@
 # log
 This function logs into the browser console. To use this function, use the following code:
 
-`mpawfw.log('[message]');`
+`mpaxfw.log('[message]');`
 
 Where `message` is the message you want to log into the browser console.
 

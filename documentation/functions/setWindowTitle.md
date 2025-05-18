@@ -1,7 +1,7 @@
 # setWindowTitle
 This function sets the window title with the specified name. To use this function, use the following code:
 
-`mpawfw.setWindowTitle('[windowTitle]');`
+`mpaxfw.setWindowTitle('[windowTitle]');`
 
 Where `windowTitle` is the name of the window you want.
 

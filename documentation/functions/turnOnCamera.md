@@ -1,7 +1,7 @@
 # turnOnCamera
 This function creates a video with your camera output. To use this function, use the following code:
 
-`mpawfw.turnOnCamera([width], [height], '[id]');`
+`mpaxfw.turnOnCamera([width], [height], '[id]');`
 
 Where `width` is the width, `height` is the height, and `id` is the id.
 

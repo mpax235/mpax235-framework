@@ -1,7 +1,7 @@
 # loadJS
 This function loads the specified JavaScript file. To use this function, use the following code:
 
-`mpawfw.loadJS('[jsfile]');`
+`mpaxfw.loadJS('[jsfile]');`
 
 Where `jsfile` is the JavaScript file you want to load.
 

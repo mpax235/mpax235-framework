@@ -1,7 +1,7 @@
 # turnOffCamera
 This function turns off your camera output on a specified video object. To use this function, use the following code:
 
-`mpawfw.turnOffCamera('[videoObject]');`
+`mpaxfw.turnOffCamera('[videoObject]');`
 
 Where `videoObject` is the video object you want to turn off the camera output for.
 
