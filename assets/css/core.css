@@ -41,7 +41,7 @@ body {
     padding: 0px;
     font-family: 'Montserrat', 'Arial';
     background-color: #000000;
-    background-image: url('https://mpax235.github.io/assets/images/websitebackground.png');
+    background-image: url('https://mpax235.freakybob.site/assets/images/websitebackground.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -85,13 +85,13 @@ body {
     }
     
     html::-webkit-scrollbar-button:single-button:vertical:decrement {
-        background-image: url('https://mpax235.github.io/assets/images/scrollbar/scrollbar_up_arrow.png');
+        background-image: url('https://mpax235.freakybob.site/assets/images/scrollbar/scrollbar_up_arrow.png');
         background-size: contain;
         background-repeat: no-repeat;
     }
     
     html::-webkit-scrollbar-button:single-button:vertical:increment {
-        background-image: url('https://mpax235.github.io/assets/images/scrollbar/scrollbar_down_arrow.png');
+        background-image: url('https://mpax235.freakybob.site/assets/images/scrollbar/scrollbar_down_arrow.png');
         background-size: contain;
         background-repeat: no-repeat;
     }

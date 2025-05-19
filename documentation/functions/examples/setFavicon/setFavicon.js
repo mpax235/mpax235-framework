@@ -23,5 +23,5 @@ SOFTWARE.
 */
 
 function execute() {
-    mpaxfw.setFavicon('https://mpax235.github.io/assets/images/favicon.gif');
+    mpaxfw.setFavicon('https://mpax235.freakybob.site/assets/images/favicon.gif');
 }
