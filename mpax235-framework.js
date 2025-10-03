@@ -29,10 +29,11 @@
  * MAIN FRAMEWORK CODE
  */
 const mpaxfw = {
-    ver: '1.3.3',
+    ver: '1.3.4',
     lastfmArtist: '',
     lastfmName: '',
     lastfmAlbum: '',
+    frameworkError: '[MPAX235 FRAMEWORK ERROR]:',
 
     //#region Art
     createCanvas: function(id, width, height, backgroundcolor) {
@@ -76,11 +77,11 @@ const mpaxfw = {
                     this.lastfmAlbum = trackAlbum; // sets lastfmAlbum to trackAlbum
                     // console.log(`${trackName}, ${trackArtist}, ${trackAlbum}`); // for debugging purposes only
                 } else {
-                    console.error('MPAX235 FRAMEWORK ERROR: ' + data); // print out a error if the url returns a error
+                    console.error(this.frameworkError, data); // print out a error if the url returns a error
                 }
             })
             .catch(error => {
-                console.error('MPAX235 FRAMEWORK ERROR: ' + error);
+                console.error(this.frameworkError, error);
             });
     },
 
@@ -100,13 +101,13 @@ const mpaxfw = {
         })
             .then(response => {
                 if (response.ok) {
-                    console.log('MPAX235 FRAMEWORK SUCCESS: Discord webhook function successful. The message that was sent to the webhook is: ' + message);
+                    console.log('[MPAX235 FRAMEWORK SUCCESS]: Discord webhook function successful. The message that was sent to the webhook is: ' + message);
                 } else {
-                    console.error('MPAX235 FRAMEWORK ERROR: Webhook failed with error: ', response.statusText);
+                    console.error(`${this.frameworkError} Webhook failed with error: `, response.statusText);
                 }
             })
             .catch(error => {
-                console.error('MPAX235 FRAMEWORK ERROR: Webhook failed with error: ', error);
+                console.error(`${this.frameworkError} Webhook failed with error: `, error);
             });
     },
     //#endregion
@@ -139,13 +140,13 @@ const mpaxfw = {
                         document.body.appendChild(videoElement); // appends videoElement to the body dom element
                     })
                     .catch(err => {
-                        console.error('MPAX235 FRAMEWORK ERROR: ' + err);
+                        console.error(this.frameworkError, err);
                     });
             } else {
-                console.error('MPAX235 FRAMEWORK ERROR: Camera not found. Please make sure you have a camera plugged into your system and it is detected.'); // if the browser fails to detect a available camera (possible issues are no cameras being plugged in)
+                console.error(`${this.frameworkError} Camera not found. Please make sure you have a camera plugged into your system and it is detected.`); // if the browser fails to detect a available camera (possible issues are no cameras being plugged in)
             }
         } catch (error) {
-            console.error('MPAX235 FRAMEWORK ERROR: ' + error);
+            console.error(this.frameworkError, error);
         }
     },
     //#endregion
@@ -212,7 +213,7 @@ const mpaxfw = {
         const sec = seconds; // declares sec with the specified sec
 
         if (isNaN(hz) || isNaN(sec) || hz <= 0 || sec <= 0) { // if hz or sec contains nothing, or hz and sec is less than 0..
-            console.log('MPAX235 FRAMEWORK ERROR: Please enter valid values for the tone() function.'); // reminds the user to enter valid values
+            console.error(`${this.frameworkError} Please enter valid values for the tone() function.`); // reminds the user to enter valid values
             return; // stop this function
         }
 
@@ -225,6 +226,18 @@ const mpaxfw = {
 
         oscillator.start(); // starts the oscillator
         setTimeout(() => oscillator.stop(), sec * 1000); // stop the oscillator when the specified seconds pass
+    },
+
+    speakTTS: function(text, rate, pitch, volume) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = rate;
+        utterance.pitch = pitch;
+        utterance.volume = volume;
+
+        const voices = speechSynthesis.getVoices();
+        utterance.voice = voices[0];
+
+        speechSynthesis.speak(utterance);
     }
     //#endregion
 };

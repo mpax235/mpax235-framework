@@ -90,3 +90,7 @@ document.getElementById('alertWindow').addEventListener('click', () => {
 document.getElementById('drawPixels').addEventListener('click', () => {
     loadMarkdown('documentation/functions/drawPixels.md');
 });
+
+document.getElementById('speakTTS').addEventListener('click', () => {
+    loadMarkdown('documentation/functions/speakTTS.md');
+});
