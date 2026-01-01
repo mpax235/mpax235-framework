@@ -29,7 +29,7 @@
  * MAIN FRAMEWORK CODE
  */
 const mpaxfw = {
-    ver: '1.3.4',
+    ver: '1.3.5',
     lastfmArtist: '',
     lastfmName: '',
     lastfmAlbum: '',
@@ -101,7 +101,7 @@ const mpaxfw = {
         })
             .then(response => {
                 if (response.ok) {
-                    console.log('[MPAX235 FRAMEWORK SUCCESS]: Discord webhook function successful. The message that was sent to the webhook is: ' + message);
+                    console.log('[MPAX235 FRAMEWORK SUCCESS]: Discord webhook POST request successful. The message sent is: ' + message);
                 } else {
                     console.error(`${this.frameworkError} Webhook failed with error: `, response.statusText);
                 }
